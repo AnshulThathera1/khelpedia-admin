@@ -146,20 +146,20 @@ export default async function OverviewPage() {
       </div>
 
       {/* Primary KPI Grid (6 metrics) */}
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
+      <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-3 xl:grid-cols-6">
         {/* Matches */}
         <Card className="bg-zinc-950 border-zinc-800">
-          <CardHeader className="flex flex-row items-center justify-between pb-2 space-y-0">
-            <CardTitle className="text-xs font-mono uppercase tracking-wider text-zinc-400">
+          <CardHeader className="flex flex-row items-center justify-between p-3.5 pb-1 sm:p-6 sm:pb-2 space-y-0">
+            <CardTitle className="text-[11px] sm:text-xs font-mono uppercase tracking-wider text-zinc-400">
               Matches
             </CardTitle>
-            <Swords className="h-4 w-4 text-red-500" />
+            <Swords className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-red-500" />
           </CardHeader>
-          <CardContent>
-            <div className="text-2xl font-bold text-white font-mono">
+          <CardContent className="p-3.5 pt-1 sm:p-6 sm:pt-0">
+            <div className="text-lg sm:text-2xl font-bold text-white font-mono">
               {matchesCount.toLocaleString()}
             </div>
-            <p className="text-[11px] text-zinc-500 mt-1">
+            <p className="text-[10px] sm:text-[11px] text-zinc-500 mt-0.5 truncate">
               Historical match archive
             </p>
           </CardContent>
@@ -167,35 +167,35 @@ export default async function OverviewPage() {
 
         {/* Tournaments */}
         <Card className="bg-zinc-950 border-zinc-800">
-          <CardHeader className="flex flex-row items-center justify-between pb-2 space-y-0">
-            <CardTitle className="text-xs font-mono uppercase tracking-wider text-zinc-400">
+          <CardHeader className="flex flex-row items-center justify-between p-3.5 pb-1 sm:p-6 sm:pb-2 space-y-0">
+            <CardTitle className="text-[11px] sm:text-xs font-mono uppercase tracking-wider text-zinc-400">
               Tournaments
             </CardTitle>
-            <Trophy className="h-4 w-4 text-amber-500" />
+            <Trophy className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-amber-500" />
           </CardHeader>
-          <CardContent>
-            <div className="text-2xl font-bold text-white font-mono">
+          <CardContent className="p-3.5 pt-1 sm:p-6 sm:pt-0">
+            <div className="text-lg sm:text-2xl font-bold text-white font-mono">
               {tournamentsCount.toLocaleString()}
             </div>
-            <p className="text-[11px] text-zinc-500 mt-1">
-              {tournamentsUpcoming} upcoming • {tournamentsCompleted} past
+            <p className="text-[10px] sm:text-[11px] text-zinc-500 mt-0.5 truncate">
+              {tournamentsUpcoming} up • {tournamentsCompleted} past
             </p>
           </CardContent>
         </Card>
 
         {/* Teams */}
         <Card className="bg-zinc-950 border-zinc-800">
-          <CardHeader className="flex flex-row items-center justify-between pb-2 space-y-0">
-            <CardTitle className="text-xs font-mono uppercase tracking-wider text-zinc-400">
+          <CardHeader className="flex flex-row items-center justify-between p-3.5 pb-1 sm:p-6 sm:pb-2 space-y-0">
+            <CardTitle className="text-[11px] sm:text-xs font-mono uppercase tracking-wider text-zinc-400">
               Teams
             </CardTitle>
-            <Shield className="h-4 w-4 text-blue-500" />
+            <Shield className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-blue-500" />
           </CardHeader>
-          <CardContent>
-            <div className="text-2xl font-bold text-white font-mono">
+          <CardContent className="p-3.5 pt-1 sm:p-6 sm:pt-0">
+            <div className="text-lg sm:text-2xl font-bold text-white font-mono">
               {teamsCount.toLocaleString()}
             </div>
-            <p className="text-[11px] text-zinc-500 mt-1">
+            <p className="text-[10px] sm:text-[11px] text-zinc-500 mt-0.5 truncate">
               Esports organizations
             </p>
           </CardContent>
@@ -203,35 +203,35 @@ export default async function OverviewPage() {
 
         {/* Articles */}
         <Card className="bg-zinc-950 border-zinc-800">
-          <CardHeader className="flex flex-row items-center justify-between pb-2 space-y-0">
-            <CardTitle className="text-xs font-mono uppercase tracking-wider text-zinc-400">
+          <CardHeader className="flex flex-row items-center justify-between p-3.5 pb-1 sm:p-6 sm:pb-2 space-y-0">
+            <CardTitle className="text-[11px] sm:text-xs font-mono uppercase tracking-wider text-zinc-400">
               Articles
             </CardTitle>
-            <FileText className="h-4 w-4 text-emerald-500" />
+            <FileText className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-emerald-500" />
           </CardHeader>
-          <CardContent>
-            <div className="text-2xl font-bold text-white font-mono">
+          <CardContent className="p-3.5 pt-1 sm:p-6 sm:pt-0">
+            <div className="text-lg sm:text-2xl font-bold text-white font-mono">
               {blogsCount.toLocaleString()}
             </div>
-            <p className="text-[11px] text-zinc-500 mt-1">
-              {blogsPublished} published • {blogsDraft} drafts
+            <p className="text-[10px] sm:text-[11px] text-zinc-500 mt-0.5 truncate">
+              {blogsPublished} pub • {blogsDraft} draft
             </p>
           </CardContent>
         </Card>
 
         {/* Players */}
         <Card className="bg-zinc-950 border-zinc-800">
-          <CardHeader className="flex flex-row items-center justify-between pb-2 space-y-0">
-            <CardTitle className="text-xs font-mono uppercase tracking-wider text-zinc-400">
+          <CardHeader className="flex flex-row items-center justify-between p-3.5 pb-1 sm:p-6 sm:pb-2 space-y-0">
+            <CardTitle className="text-[11px] sm:text-xs font-mono uppercase tracking-wider text-zinc-400">
               Players
             </CardTitle>
-            <UserCheck className="h-4 w-4 text-purple-500" />
+            <UserCheck className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-purple-500" />
           </CardHeader>
-          <CardContent>
-            <div className="text-2xl font-bold text-white font-mono">
+          <CardContent className="p-3.5 pt-1 sm:p-6 sm:pt-0">
+            <div className="text-lg sm:text-2xl font-bold text-white font-mono">
               {playersCount.toLocaleString()}
             </div>
-            <p className="text-[11px] text-zinc-500 mt-1">
+            <p className="text-[10px] sm:text-[11px] text-zinc-500 mt-0.5 truncate">
               Tracked competitors
             </p>
           </CardContent>
@@ -239,17 +239,17 @@ export default async function OverviewPage() {
 
         {/* Users */}
         <Card className="bg-zinc-950 border-zinc-800">
-          <CardHeader className="flex flex-row items-center justify-between pb-2 space-y-0">
-            <CardTitle className="text-xs font-mono uppercase tracking-wider text-zinc-400">
+          <CardHeader className="flex flex-row items-center justify-between p-3.5 pb-1 sm:p-6 sm:pb-2 space-y-0">
+            <CardTitle className="text-[11px] sm:text-xs font-mono uppercase tracking-wider text-zinc-400">
               Platform Users
             </CardTitle>
-            <Users className="h-4 w-4 text-cyan-500" />
+            <Users className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-cyan-500" />
           </CardHeader>
-          <CardContent>
-            <div className="text-2xl font-bold text-white font-mono">
+          <CardContent className="p-3.5 pt-1 sm:p-6 sm:pt-0">
+            <div className="text-lg sm:text-2xl font-bold text-white font-mono">
               {usersCount.toLocaleString()}
             </div>
-            <p className="text-[11px] text-zinc-500 mt-1">
+            <p className="text-[10px] sm:text-[11px] text-zinc-500 mt-0.5 truncate">
               Supabase Auth accounts
             </p>
           </CardContent>

@@ -100,7 +100,7 @@ export default async function AdminBlogsPage({ searchParams }) {
   const canDelete = hasPermission(adminUser.role, ADMIN_PERMISSIONS.BLOGS_DELETE);
 
   return (
-    <div className="p-6 md:p-8 space-y-8 max-w-7xl mx-auto">
+    <div className="space-y-6 sm:space-y-8 max-w-7xl mx-auto min-w-0">
       <BlogsClient
         blogs={enrichedBlogs}
         totalCount={filteredCount ?? totalBlogs}

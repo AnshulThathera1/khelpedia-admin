@@ -132,7 +132,7 @@ export default function SeoClient({
                   </Badge>
                 </div>
                 <p className="text-xs text-zinc-300 leading-relaxed max-w-2xl">
-                  This administration interface is accessible on private LAN / localhost only (Port 3001). Every response is injected with <code className="text-emerald-300 bg-emerald-950/40 px-1 py-0.5 rounded font-mono text-[11px]">X-Robots-Tag: noindex, nofollow, noarchive, nosnippet</code> and shielded by <code className="text-emerald-300 bg-emerald-950/40 px-1 py-0.5 rounded font-mono text-[11px]">robots.txt: Disallow /</code>. Normal users and search crawlers have zero access.
+                  This administration interface is strictly isolated and access-controlled. Every response is injected with <code className="text-emerald-300 bg-emerald-950/40 px-1 py-0.5 rounded font-mono text-[11px]">X-Robots-Tag: noindex, nofollow, noarchive, nosnippet</code> and shielded by <code className="text-emerald-300 bg-emerald-950/40 px-1 py-0.5 rounded font-mono text-[11px]">robots.txt: Disallow /</code>. Search crawlers and unauthenticated visitors have zero access.
                 </p>
               </div>
             </div>

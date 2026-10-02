@@ -157,7 +157,7 @@ export default async function MatchesPage({ searchParams }) {
   }
 
   return (
-    <div className="p-6 md:p-8 space-y-8 max-w-7xl mx-auto">
+    <div className="space-y-6 sm:space-y-8 max-w-7xl mx-auto min-w-0">
       <MatchesClient
         initialMatches={matches}
         totalCount={filteredCount}

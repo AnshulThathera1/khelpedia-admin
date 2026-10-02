@@ -37,6 +37,7 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
+  useSidebar,
 } from "@/components/ui/sidebar";
 import {
   DropdownMenu,
@@ -112,6 +113,7 @@ const navigationGroups = [
 
 export function AppSidebar({ adminUser }) {
   const pathname = usePathname();
+  const { isMobile, setOpenMobile } = useSidebar();
 
   const userEmail = adminUser?.user?.email || "admin@khelpedia.org";
   const displayName =
@@ -153,13 +155,13 @@ export function AppSidebar({ adminUser }) {
           </div>
         </div>
 
-        {/* Private Network Isolation Badge */}
+        {/* Environment Status Badge */}
         <div className="mt-3 px-2 py-1 rounded bg-zinc-900 border border-zinc-800 flex items-center justify-between text-[10px] font-mono">
           <span className="flex items-center gap-1 text-emerald-400 font-semibold">
             <Lock className="h-3 w-3" />
-            <span>Private LAN Only</span>
+            <span>Secure Admin</span>
           </span>
-          <span className="text-zinc-400">Port 3001</span>
+          <span className="text-zinc-400">v1.0.0</span>
         </div>
       </SidebarHeader>
 
@@ -180,9 +182,18 @@ export function AppSidebar({ adminUser }) {
                   return (
                     <SidebarMenuItem key={item.title}>
                       <SidebarMenuButton
-                        render={<Link href={item.url} />}
+                        render={
+                          <Link
+                            href={item.url}
+                            onClick={() => {
+                              if (isMobile) {
+                                setOpenMobile(false);
+                              }
+                            }}
+                          />
+                        }
                         isActive={isActive}
-                        className={`flex items-center gap-3 px-3 py-2 rounded-lg text-xs font-medium transition-colors ${
+                        className={`flex items-center gap-3 px-3 py-2.5 sm:py-2 rounded-lg text-xs font-medium transition-colors ${
                           isActive
                             ? "bg-zinc-800 text-white font-semibold"
                             : "text-zinc-400 hover:text-zinc-200 hover:bg-zinc-900"
@@ -232,8 +243,9 @@ export function AppSidebar({ adminUser }) {
                   <p className="font-medium text-white truncate">{displayName}</p>
                   <p className="text-[11px] text-zinc-400 font-mono truncate">{userEmail}</p>
                 </div>
-                <div className="px-2 py-1 text-[10px] text-zinc-400 font-mono">
-                  Network: LAN / Loopback Only
+                <div className="px-2 py-1 text-[10px] text-zinc-400 font-mono flex items-center justify-between">
+                  <span>Session</span>
+                  <span className="text-emerald-400">Authenticated</span>
                 </div>
                 <DropdownMenuItem
                   onClick={handleSignOut}

@@ -321,7 +321,7 @@ export default async function SeoPage({ searchParams }) {
   });
 
   return (
-    <div className="p-6 md:p-8 space-y-8 max-w-7xl mx-auto">
+    <div className="space-y-6 sm:space-y-8 max-w-7xl mx-auto min-w-0">
       <SeoClient
         auditRows={auditRows}
         currentEntity={currentEntity}

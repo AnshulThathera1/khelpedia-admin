@@ -1,0 +1,5 @@
+# KhelPediA Admin / Control Center
+# Private administrative interface — Crawling and indexing strictly forbidden.
+
+User-agent: *
+Disallow: /

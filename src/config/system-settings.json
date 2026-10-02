@@ -1,0 +1,75 @@
+{
+  "platform": {
+    "siteName": "KhelPediA",
+    "siteTagline": "The Ultimate Competitive Esports Encyclopedia & Real-Time Stats Hub",
+    "siteUrl": "https://khelpedia.org",
+    "contactEmail": "contact@khelpedia.org",
+    "supportEmail": "support@khelpedia.org",
+    "discordUrl": "https://discord.gg/khelpedia",
+    "twitterHandle": "@KhelPediA_org",
+    "defaultTimezone": "Asia/Kolkata (IST)",
+    "defaultLanguage": "en"
+  },
+  "maintenance": {
+    "enabled": false,
+    "message": "KhelPediA is undergoing scheduled system optimization. We will be back online shortly.",
+    "estimatedDowntime": "15 minutes",
+    "whitelistedIps": [
+      "127.0.0.1",
+      "::1",
+      "192.168.0.0/16",
+      "10.0.0.0/8"
+    ]
+  },
+  "featureFlags": {
+    "liveMatchScoreStreaming": {
+      "name": "Live Match Score Streaming",
+      "description": "Enables polling and live score displays on match detail pages.",
+      "enabled": true,
+      "category": "Competition"
+    },
+    "aiEditorialAutoPublish": {
+      "name": "AI Editorial Auto-Publish",
+      "description": "Allows scheduled cron job to publish AI articles directly to the live site.",
+      "enabled": true,
+      "category": "Editorial"
+    },
+    "userRegistrationOpen": {
+      "name": "Public User Registration",
+      "description": "Allows new users to create accounts and join the KhelPediA community.",
+      "enabled": true,
+      "category": "Community"
+    },
+    "communityComments": {
+      "name": "Article Comments & Discussions",
+      "description": "Enables user discussion threads under published news articles.",
+      "enabled": true,
+      "category": "Community"
+    },
+    "adsterraMonetization": {
+      "name": "Adsterra Network Monetization",
+      "description": "Enables delivery of responsive display banners and native ad widgets.",
+      "enabled": true,
+      "category": "Monetization"
+    },
+    "publicApiV1": {
+      "name": "Public REST API (v1)",
+      "description": "Exposes read-only API endpoints for external developers and partners.",
+      "enabled": false,
+      "category": "Security"
+    }
+  },
+  "security": {
+    "privateNetworkEnforced": true,
+    "allowedPort": 3001,
+    "adminSessionTimeoutMinutes": 120,
+    "maxLoginAttempts": 5,
+    "lockoutDurationMinutes": 15,
+    "strictCorsOrigins": [
+      "http://localhost:3001",
+      "http://127.0.0.1:3001"
+    ]
+  },
+  "lastUpdated": "2026-09-30T22:15:00.000Z",
+  "updatedBy": "admin@khelpedia.org"
+}

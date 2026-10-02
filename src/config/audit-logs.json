@@ -1,0 +1,107 @@
+[
+  {
+    "id": "audit_1727715360000",
+    "timestamp": "2026-09-30T22:16:00.000Z",
+    "action": "SYSTEM_SECURITY_INITIALIZED",
+    "category": "SECURITY",
+    "entityType": "system",
+    "entityId": "khelpedia-admin",
+    "actorId": "12a9108d-bab5-4fd8-96c3-57e5c9dd9cd1",
+    "actorEmail": "admin@khelpedia.org",
+    "actorRole": "SUPER_ADMIN",
+    "ipAddress": "127.0.0.1 (LAN / Localhost)",
+    "details": "Private network isolation enforced on Port 3001. Security headers and robots.txt disallow verified.",
+    "metadata": {
+      "port": 3001,
+      "privateNetwork": true,
+      "robotsHeader": "noindex, nofollow, noarchive, nosnippet"
+    }
+  },
+  {
+    "id": "audit_1727715300000",
+    "timestamp": "2026-09-30T22:15:00.000Z",
+    "action": "INGESTION_SERVICE_TESTED",
+    "category": "DATA",
+    "entityType": "pipeline",
+    "entityId": "pandascore_api",
+    "actorId": "12a9108d-bab5-4fd8-96c3-57e5c9dd9cd1",
+    "actorEmail": "admin@khelpedia.org",
+    "actorRole": "SUPER_ADMIN",
+    "ipAddress": "127.0.0.1 (LAN)",
+    "details": "PandaScore REST API connection ping test completed with 200 OK. Rate limit: 970+ remaining.",
+    "metadata": {
+      "provider": "PandaScore",
+      "latencyMs": 1661,
+      "status": 200
+    }
+  },
+  {
+    "id": "audit_1727714700000",
+    "timestamp": "2026-09-30T22:05:00.000Z",
+    "action": "AD_SETTINGS_CONFIGURED",
+    "category": "MONETIZATION",
+    "entityType": "ad_network",
+    "entityId": "adsterra",
+    "actorId": "12a9108d-bab5-4fd8-96c3-57e5c9dd9cd1",
+    "actorEmail": "admin@khelpedia.org",
+    "actorRole": "SUPER_ADMIN",
+    "ipAddress": "127.0.0.1 (LAN)",
+    "details": "Adsterra master switch enabled. 7 template placements and 5 ad units verified with CLS pre-reserved containers.",
+    "metadata": {
+      "masterEnabled": true,
+      "placementsCount": 7,
+      "policyGuard": "100% compliant"
+    }
+  },
+  {
+    "id": "audit_1727714100000",
+    "timestamp": "2026-09-30T21:55:00.000Z",
+    "action": "SEO_SITEMAPS_VERIFIED",
+    "category": "SYSTEM",
+    "entityType": "sitemap",
+    "entityId": "sitemap-index",
+    "actorId": "12a9108d-bab5-4fd8-96c3-57e5c9dd9cd1",
+    "actorEmail": "admin@khelpedia.org",
+    "actorRole": "SUPER_ADMIN",
+    "ipAddress": "127.0.0.1 (LAN)",
+    "details": "SEO sitemaps and indexability policy audited. 5 index partitions verified.",
+    "metadata": {
+      "sitemaps": ["matches", "tournaments", "players", "teams", "blogs"],
+      "qualityScore": 96
+    }
+  },
+  {
+    "id": "audit_1727713500000",
+    "timestamp": "2026-09-30T21:45:00.000Z",
+    "action": "MEDIA_BUCKET_INITIALIZED",
+    "category": "CONTENT",
+    "entityType": "storage_bucket",
+    "entityId": "khelpedia-media",
+    "actorId": "12a9108d-bab5-4fd8-96c3-57e5c9dd9cd1",
+    "actorEmail": "admin@khelpedia.org",
+    "actorRole": "SUPER_ADMIN",
+    "ipAddress": "127.0.0.1 (LAN)",
+    "details": "Public Supabase storage bucket 'khelpedia-media' provisioned and verified for blog assets.",
+    "metadata": {
+      "bucket": "khelpedia-media",
+      "public": true
+    }
+  },
+  {
+    "id": "audit_1727712900000",
+    "timestamp": "2026-09-30T21:35:00.000Z",
+    "action": "USER_PERMISSIONS_UPDATED",
+    "category": "ACCESS",
+    "entityType": "profile",
+    "entityId": "12a9108d-bab5-4fd8-96c3-57e5c9dd9cd1",
+    "actorId": "12a9108d-bab5-4fd8-96c3-57e5c9dd9cd1",
+    "actorEmail": "admin@khelpedia.org",
+    "actorRole": "SUPER_ADMIN",
+    "ipAddress": "127.0.0.1 (LAN)",
+    "details": "RBAC permission matrix verified across all 8 administrative roles.",
+    "metadata": {
+      "role": "SUPER_ADMIN",
+      "status": "active"
+    }
+  }
+]

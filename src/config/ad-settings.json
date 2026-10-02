@@ -1,0 +1,134 @@
+{
+  "masterEnabled": true,
+  "provider": "adsterra",
+  "policySafety": {
+    "blockAdultAds": true,
+    "blockPopunders": true,
+    "clsGuardEnabled": true,
+    "noSsrAds": true,
+    "contentGapMinWords": 150
+  },
+  "placements": {
+    "homepage": {
+      "id": "homepage",
+      "name": "Homepage Leaderboard",
+      "targetPath": "/",
+      "type": "banner",
+      "format": "Responsive Leaderboard (728x90 desktop / 320x50 mobile)",
+      "enabled": true,
+      "description": "Renders between top featured hero and recent tournaments feed on the home page."
+    },
+    "match": {
+      "id": "match",
+      "name": "Match Detail Banner",
+      "targetPath": "/matches/[id]",
+      "type": "banner",
+      "format": "Responsive Banner (728x90 / 320x50)",
+      "enabled": true,
+      "description": "Placed after the primary match scoreboard and live status card."
+    },
+    "team": {
+      "id": "team",
+      "name": "Team Profile Banner",
+      "targetPath": "/teams/[id]",
+      "type": "banner",
+      "format": "Responsive Banner (728x90 / 320x50)",
+      "enabled": true,
+      "description": "Placed between team header / bio and roster / tournament history."
+    },
+    "tournament": {
+      "id": "tournament",
+      "name": "Tournament Banner",
+      "targetPath": "/tournaments/[id]",
+      "type": "banner",
+      "format": "Responsive Banner (728x90 / 320x50)",
+      "enabled": true,
+      "description": "Placed directly above tournament brackets and match schedules."
+    },
+    "player": {
+      "id": "player",
+      "name": "Player Profile Banner",
+      "targetPath": "/players/[slug]",
+      "type": "banner",
+      "format": "Responsive Banner (728x90 / 320x50)",
+      "enabled": true,
+      "description": "Separates the player bio from career statistics and tournament list."
+    },
+    "blog": {
+      "id": "blog",
+      "name": "Blog Editorial Article Banner",
+      "targetPath": "/blogs/[slug]",
+      "type": "banner",
+      "format": "Responsive Leaderboard & Mid-Article Native Widget",
+      "enabled": true,
+      "description": "Embedded between article paragraphs and related esports stories."
+    },
+    "root": {
+      "id": "root",
+      "name": "Global Social Bar",
+      "targetPath": "All pages (Root Layout)",
+      "type": "socialbar",
+      "format": "Non-intrusive bottom notification bar",
+      "enabled": true,
+      "description": "Renders site-wide via root layout client hook without blocking user navigation."
+    }
+  },
+  "adUnits": {
+    "banner_728x90": {
+      "id": "banner_728x90",
+      "name": "Desktop Leaderboard",
+      "format": "Display Banner",
+      "dimensions": "728x90",
+      "zoneKey": "5f86b8ba897a34d202901f2a1670db55",
+      "scriptEndpoint": "https://www.highrevenueformat.com/5f86b8ba897a34d202901f2a1670db55/invoke.js",
+      "status": "active",
+      "device": "desktop",
+      "enabled": true
+    },
+    "banner_320x50": {
+      "id": "banner_320x50",
+      "name": "Mobile Sticky Banner",
+      "format": "Display Banner",
+      "dimensions": "320x50",
+      "zoneKey": "4f4ab1bbe05068164ef41d1096876079",
+      "scriptEndpoint": "https://www.highrevenueformat.com/4f4ab1bbe05068164ef41d1096876079/invoke.js",
+      "status": "active",
+      "device": "mobile",
+      "enabled": true
+    },
+    "banner_300x250": {
+      "id": "banner_300x250",
+      "name": "Medium Rectangle MPU",
+      "format": "Display Banner",
+      "dimensions": "300x250",
+      "zoneKey": "cc7bdff7f055d2ba8a47a30cca4735e6",
+      "scriptEndpoint": "https://www.highrevenueformat.com/cc7bdff7f055d2ba8a47a30cca4735e6/invoke.js",
+      "status": "active",
+      "device": "all",
+      "enabled": true
+    },
+    "native": {
+      "id": "native",
+      "name": "Native Recommendation Widget",
+      "format": "Native Ads",
+      "dimensions": "Fluid / Responsive",
+      "containerId": "container-f6a1d6b7a29abf9d3dc957e3de20a8da",
+      "scriptUrl": "https://pl31576901.profitablecreativeformat.com/f6a1d6b7a29abf9d3dc957e3de20a8da/invoke.js",
+      "status": "active",
+      "device": "all",
+      "enabled": true
+    },
+    "socialbar": {
+      "id": "socialbar",
+      "name": "Smart Social Bar Notification",
+      "format": "Social Bar",
+      "dimensions": "Floating Bar",
+      "scriptUrl": "https://pl31576900.profitableratecpmnetwork.com/fb/a6/fd/fba6fd5b304561dbcb1a5a3013ef09ea.js",
+      "status": "active",
+      "device": "all",
+      "enabled": true
+    }
+  },
+  "lastUpdated": "2026-09-30T22:00:00.000Z",
+  "updatedBy": "admin@khelpedia.org"
+}

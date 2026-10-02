@@ -1,0 +1,115 @@
+{
+  "lastIngestion": "2026-10-02T16:12:12.467Z",
+  "history": [
+    {
+      "id": "job_1790957532467",
+      "timestamp": "2026-10-02T16:12:12.467Z",
+      "type": "ai_blog_generation",
+      "name": "Draft Review & Publish",
+      "status": "success",
+      "durationMs": 450,
+      "details": "Published reviewed draft: 'Global Esports Stuns EDG, Survives Valorant Champions Group B' (/blogs/global-esports-stuns-edg-survives-valorant-champions-group-b)",
+      "recordsCount": 1
+    },
+    {
+      "id": "job_1790957449982",
+      "timestamp": "2026-10-02T16:10:49.982Z",
+      "type": "ai_blog_generation",
+      "name": "AI Article Generation",
+      "status": "error",
+      "durationMs": 17291,
+      "details": "Generation failed: Expected ',' or '}' after property value in JSON at position 3754 (line 4 column 3455)",
+      "recordsCount": 0
+    },
+    {
+      "id": "job_1790957399417",
+      "timestamp": "2026-10-02T16:09:59.417Z",
+      "type": "ai_blog_generation",
+      "name": "Draft Review & Publish",
+      "status": "success",
+      "durationMs": 450,
+      "details": "Published reviewed draft: 'T1 Ends JDG's Champions Run, VCT China's Series Drought in Shanghai' (/blogs/t1-ends-jdg-s-champions-run-vct-china-s-series-drought-in-shanghai)",
+      "recordsCount": 1
+    },
+    {
+      "id": "job_1790957329556",
+      "timestamp": "2026-10-02T16:08:49.556Z",
+      "type": "ai_blog_cron",
+      "name": "Hourly AI Blog Cron (HTTP Trigger)",
+      "status": "success",
+      "durationMs": 31972,
+      "details": "Blog generated and published successfully!",
+      "recordsCount": 1
+    },
+    {
+      "id": "job_1790957218777",
+      "timestamp": "2026-10-02T16:06:58.777Z",
+      "type": "ai_blog_generation",
+      "name": "Draft Review & Publish",
+      "status": "success",
+      "durationMs": 450,
+      "details": "Published reviewed draft: 'BGMI Showdown: India's Elite Clash for Supremacy in KhelPediA Preview' (/blogs/bgmi-showdown-india-s-elite-clash-for-supremacy-in-khelpedia-preview)",
+      "recordsCount": 1
+    },
+    {
+      "id": "job_1790957090173",
+      "timestamp": "2026-10-02T16:04:50.173Z",
+      "type": "ai_blog_generation",
+      "name": "AI Article Generation",
+      "status": "error",
+      "durationMs": 5438,
+      "details": "Generation failed: {\"error\":{\"code\":503,\"message\":\"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\"status\":\"UNAVAILABLE\"}}",
+      "recordsCount": 0
+    },
+    {
+      "id": "job_1790789077234",
+      "timestamp": "2026-09-30T17:24:37.234Z",
+      "type": "ai_blog_generation",
+      "name": "Draft Review & Publish",
+      "status": "success",
+      "durationMs": 450,
+      "details": "Published reviewed draft: '100 Thieves Dominates FUT, Secures VCT Champions Shanghai Playoff Berth' (/blogs/100-thieves-dominates-fut-secures-vct-champions-shanghai-playoff-berth)",
+      "recordsCount": 1
+    },
+    {
+      "id": "job_init_001",
+      "type": "ai_blog_cron",
+      "name": "Hourly AI Blog Ingestion",
+      "timestamp": "2026-09-30T21:00:15.000Z",
+      "status": "success",
+      "durationMs": 4210,
+      "details": "Generated and published article: 'The End of a Fairy Tale? SiuFatBB & Wolves Chart New Courses After Toronto Triumph'",
+      "recordsCount": 1
+    },
+    {
+      "id": "job_init_002",
+      "type": "pandascore_sync",
+      "name": "PandaScore Match Sync (Valorant)",
+      "timestamp": "2026-09-30T18:30:00.000Z",
+      "status": "success",
+      "durationMs": 2840,
+      "details": "Synced 25 recent matches. 0 new matches inserted, 25 updated/idempotent.",
+      "recordsCount": 25
+    },
+    {
+      "id": "job_init_003",
+      "type": "ai_blog_cron",
+      "name": "Hourly AI Blog Ingestion",
+      "timestamp": "2026-09-30T17:00:12.000Z",
+      "status": "skipped",
+      "durationMs": 1120,
+      "details": "All recent RSS stories from vlr.gg have already been covered. Skipped.",
+      "recordsCount": 0
+    },
+    {
+      "id": "job_init_004",
+      "type": "pandascore_sync",
+      "name": "PandaScore Match Sync (CS2)",
+      "timestamp": "2026-09-30T12:00:00.000Z",
+      "status": "success",
+      "durationMs": 3150,
+      "details": "Synced 20 matches. Idempotent check passed.",
+      "recordsCount": 20
+    }
+  ]
+}

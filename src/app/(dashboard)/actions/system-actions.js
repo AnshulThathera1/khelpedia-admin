@@ -5,6 +5,7 @@ import { ADMIN_PERMISSIONS } from "@/lib/rbac";
 import { revalidatePath } from "next/cache";
 import fs from "fs/promises";
 import path from "path";
+import { query } from "@/lib/db";
 
 const SETTINGS_PATH = path.join(process.cwd(), "src", "config", "system-settings.json");
 const AUDIT_PATH = path.join(process.cwd(), "src", "config", "audit-logs.json");
@@ -18,6 +19,16 @@ export async function getSystemSettings() {
   try {
     const raw = await fs.readFile(SETTINGS_PATH, "utf-8");
     const settings = JSON.parse(raw);
+
+    // Sync latest maintenance mode directly from shared PostgreSQL database
+    try {
+      const dbRes = await query("SELECT value FROM system_settings WHERE key = 'maintenance'");
+      if (dbRes?.rows?.[0]?.value) {
+        settings.maintenance = { ...settings.maintenance, ...dbRes.rows[0].value };
+      }
+    } catch (dbErr) {
+      console.warn("Could not read maintenance mode from DB:", dbErr.message);
+    }
 
     // Build masked environment variables audit report
     const maskKey = (val) => {
@@ -209,6 +220,23 @@ export async function toggleMaintenanceModeAction(enabled, message) {
     }
 
     await saveSystemSettings(settings, adminUser.user?.email);
+
+    // Persist to PostgreSQL database so khelpedia.org immediately sees it
+    try {
+      await query(
+        `INSERT INTO system_settings (key, value, updated_at, updated_by)
+         VALUES ($1, $2, NOW(), $3)
+         ON CONFLICT (key) DO UPDATE
+         SET value = $2, updated_at = NOW(), updated_by = $3`,
+        [
+          "maintenance",
+          JSON.stringify(settings.maintenance),
+          adminUser.user?.email || "admin@khelpedia.org",
+        ]
+      );
+    } catch (dbErr) {
+      console.error("Failed to sync maintenance mode to PostgreSQL:", dbErr);
+    }
 
     await recordAuditLog(
       {

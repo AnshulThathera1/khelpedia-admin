@@ -21,9 +21,18 @@ export const metadata = {
     index: false,
     follow: false,
     nocache: true,
+    noarchive: true,
+    nosnippet: true,
+    noimageindex: true,
     googleBot: {
       index: false,
       follow: false,
+      noarchive: true,
+      nosnippet: true,
+      noimageindex: true,
+      "max-video-preview": -1,
+      "max-image-preview": "none",
+      "max-snippet": -1,
     },
   },
 };

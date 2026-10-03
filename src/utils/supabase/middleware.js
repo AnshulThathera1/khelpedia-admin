@@ -17,7 +17,7 @@ export async function updateSession(request) {
   })
 
   // Enforce Network Isolation & SEO Block Headers on ALL requests
-  supabaseResponse.headers.set('X-Robots-Tag', 'noindex, nofollow, noarchive, nosnippet')
+  supabaseResponse.headers.set('X-Robots-Tag', 'noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate')
   supabaseResponse.headers.set('X-Frame-Options', 'DENY')
   supabaseResponse.headers.set('X-Content-Type-Options', 'nosniff')
   supabaseResponse.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin')
@@ -39,7 +39,7 @@ export async function updateSession(request) {
             request,
           })
           // Re-apply security headers
-          supabaseResponse.headers.set('X-Robots-Tag', 'noindex, nofollow, noarchive, nosnippet')
+          supabaseResponse.headers.set('X-Robots-Tag', 'noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate')
           supabaseResponse.headers.set('X-Frame-Options', 'DENY')
           supabaseResponse.headers.set('X-Content-Type-Options', 'nosniff')
           supabaseResponse.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin')
